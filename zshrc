@@ -57,7 +57,7 @@ source $ZSH/oh-my-zsh.sh
 hash -d temp="~/temp"
 
 # alias command list
-alias vi='vim'
+alias vi='/usr/bin/vim'
 alias mci='mvn clean install'
 alias mct='mvn clean test'
 alias mt='mvn test'
