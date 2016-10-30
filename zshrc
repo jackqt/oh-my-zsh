@@ -46,11 +46,13 @@ ZSH_THEME="haichong20"
 #plugins=(autojump brew command-not-found history history-substring-search)
 plugins=(autojump command-not-found history history-substring-search git)
 
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-##export http_proxy="http://host:port"
+
+#export http_proxy="http://host:port"
 ##export https_proxy="http://host:port"
 
 # alias folder list
@@ -58,6 +60,20 @@ hash -d temp="~/temp"
 
 # alias command list
 alias vi='/usr/bin/vim'
-alias mci='mvn clean install'
+alias ec='emacsclient'
+alias mc='mvn clean'
+alias mcp='mvn clean package'
 alias mct='mvn clean test'
-alias mt='mvn test'
+alias mci='mvn clean install'
+
+
+export JAVA_HOME=`/usr/libexec/java_home`
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export PATH=/usr/local/Cellar/node/5.0.0/bin:$JAVA_HOME/bin:$PATH
+export PHANTOMJS_BIN=/usr/local/bin/phantomjs
+
+# tabtab source for yo package
+# uninstall by removing these lines or running `tabtab uninstall yo`
+[[ -f /usr/local/lib/node_modules/yo/node_modules/tabtab/.completions/yo.zsh ]] && . /usr/local/lib/node_modules/yo/node_modules/tabtab/.completions/yo.zsh
+# added by travis gem
+[ -f /Users/mac/.travis/travis.sh ] && source /Users/mac/.travis/travis.sh
