@@ -68,12 +68,18 @@ alias mci='mvn clean install'
 
 
 export JAVA_HOME=`/usr/libexec/java_home`
+export CORDOVA_HOME=/Users/mac/node_modules/cordova/
+export ANDROID_SDK_HOME=/Users/mac/Library/Android
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 export PATH=/usr/local/Cellar/node/5.0.0/bin:$JAVA_HOME/bin:$PATH
 export PHANTOMJS_BIN=/usr/local/bin/phantomjs
+export PATH=$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools:$ANDROID_SDK_HOME/platforms:$CORDOVA_HOME/bin:$PATH
+
 
 # tabtab source for yo package
 # uninstall by removing these lines or running `tabtab uninstall yo`
 [[ -f /usr/local/lib/node_modules/yo/node_modules/tabtab/.completions/yo.zsh ]] && . /usr/local/lib/node_modules/yo/node_modules/tabtab/.completions/yo.zsh
 # added by travis gem
 [ -f /Users/mac/.travis/travis.sh ] && source /Users/mac/.travis/travis.sh
+
+
