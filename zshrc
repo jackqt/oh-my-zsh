@@ -44,7 +44,7 @@ ZSH_THEME="haichong20"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #plugins=(autojump brew command-not-found history history-substring-search)
-plugins=(autojump command-not-found history history-substring-search git)
+plugins=(autojump command-not-found history history-substring-search git svn-fast-info)
 
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
@@ -67,13 +67,15 @@ alias mct='mvn clean test'
 alias mci='mvn clean install'
 
 
+export EDITOR=ec
+
 export JAVA_HOME=`/usr/libexec/java_home`
 export CORDOVA_HOME=/Users/mac/node_modules/cordova/
 export ANDROID_SDK_HOME=/Users/mac/Library/Android
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 export PATH=/usr/local/Cellar/node/5.0.0/bin:$JAVA_HOME/bin:$PATH
 export PHANTOMJS_BIN=/usr/local/bin/phantomjs
-export PATH=$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools:$ANDROID_SDK_HOME/platforms:$CORDOVA_HOME/bin:$PATH
+export PATH=/Users/mac/Library/Python/2.7/bin/:$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools:$ANDROID_SDK_HOME/platforms:$CORDOVA_HOME/bin:$PATH
 
 
 # tabtab source for yo package
@@ -81,5 +83,6 @@ export PATH=$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools:$ANDROID_SD
 [[ -f /usr/local/lib/node_modules/yo/node_modules/tabtab/.completions/yo.zsh ]] && . /usr/local/lib/node_modules/yo/node_modules/tabtab/.completions/yo.zsh
 # added by travis gem
 [ -f /Users/mac/.travis/travis.sh ] && source /Users/mac/.travis/travis.sh
+
 
 
