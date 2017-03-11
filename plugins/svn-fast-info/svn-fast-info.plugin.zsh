@@ -24,18 +24,19 @@ function svn_prompt_info() {
       $ZSH_THEME_SVN_PROMPT_SUFFIX \
       $ZSH_PROMPT_BASE_COLOR
   else
-    printf '%s%s%s %s%s:%s%s%s%s%s' \
+    printf '%s%s%s%s%s%s%s%s%s%s%s%s' \
       $ZSH_PROMPT_BASE_COLOR \
       $ZSH_THEME_SVN_PROMPT_PREFIX \
       \
-      "$(svn_status_info $info)" \
       $ZSH_PROMPT_BASE_COLOR \
       \
       $ZSH_THEME_BRANCH_NAME_COLOR \
       $(svn_current_branch_name $info) \
       $ZSH_PROMPT_BASE_COLOR \
       \
+      $ZSH_THEME_SVN_PROMPT_REVISION_BEFORE \
       $(svn_current_revision $info) \
+      $ZSH_THEME_SVN_PROMPT_REVISION_AFTER \
       $ZSH_PROMPT_BASE_COLOR \
       \
       $ZSH_THEME_SVN_PROMPT_SUFFIX \
