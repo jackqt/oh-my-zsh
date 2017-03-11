@@ -44,7 +44,7 @@ ZSH_THEME="haichong20"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #plugins=(autojump brew command-not-found history history-substring-search)
-plugins=(autojump command-not-found history history-substring-search git svn-fast-info)
+plugins=(autojump command-not-found history history-substring-search git svn-fast-info python)
 
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
