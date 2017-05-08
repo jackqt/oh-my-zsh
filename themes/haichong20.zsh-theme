@@ -36,6 +36,6 @@ ZSH_THEME_GIT_PROMPT_DIRTY=""
 
 # Prompt format
 PROMPT='
-%{$RED%}[%T]%{$RESET_COLOR%} %{$GREEN_BOLD%}%n%{$WHITE%}: %{$YELLOW%}%~%u%{$RESET_COLOR%}
+%{$RED%}[%T]%{$RESET_COLOR%} %{$GREEN_BOLD%}%n%{$WHITE%} @ %{$GREEN_BOLD%}%m%{$WHITE%}: %{$YELLOW%}%~%u%{$RESET_COLOR%}
 %{$GREEN%}$%{$RESET_COLOR%} '
 RPROMPT='$(git_prompt_info)$(git_prompt_short_sha)$(svn_prompt_info)%{$RESET_COLOR%}'
