@@ -5,10 +5,11 @@ SAVEHIST=1000
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="haichong20"
 
-plugins=(autojump command-not-found history history-substring-search git svn-fast-info python)
+plugins=(autojump command-not-found history history-substring-search git git-flow svn-fast-info python osx)
 
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
+source $HOME/.zshenv
 source $ZSH/oh-my-zsh.sh
 
 # Set to this to use case-sensitive completion
@@ -36,3 +37,7 @@ source $ZSH/oh-my-zsh.sh
 # VCS as dirty. This makes repository status check for large repositories much,
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
+export PATH="/usr/local/sbin:$PATH"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
